@@ -5,7 +5,7 @@ This repository contains scripts that may be useful when working with [temi](htt
 
 ## Usage
 ### package_name.sh
-Returns the package name for an APK file. To be used with `shortcut.sh`
+Returns the package name for an APK file.
 ```
 usage: package_name.sh apk_filename
 
@@ -36,4 +36,12 @@ positional arguments:
   package_name          APK's package name
   shortcut_name         Shortcut name; use double-quotes to encapsulate
                         a name with whitespace
+```
+
+### jp_keyboard_config.sh
+Configure's Japanese keyboard for temi. 
+
+Connect to a temi robot using ADB, then from a terminal:
+```
+./jp_keyboard_config.sh
 ```

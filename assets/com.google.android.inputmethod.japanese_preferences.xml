@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="japanese_emoji_provider_type">NONE</string>
+    <boolean name="enable_share_snippets" value="false" />
+    <boolean name="enable_suggest_emojis" value="true" />
+    <boolean name="japanese_qwerty_layout_for_alphabet.landscape" value="true" />
+    <boolean name="enable_sound_on_keypress" value="false" />
+    <boolean name="enable_voice_input" value="true" />
+    <string name="key_long_press_delay">300</string>
+    <string name="ACTIVE_IME.SOFT.ja-JP.landscape">ja_qwerty_hiragana</string>
+    <boolean name="enable_user_metrics" value="false" />
+    <boolean name="import_user_contacts" value="true" />
+    <string name="keyboard_slide_sensitivity_ratio.landscape">1.0</string>
+    <int name="contacts_first_time_delay_millis" value="60000" />
+    <string name="recent_theme_spec_json_array">[{&quot;keyboard_theme&quot;:&quot;material_dark_theme&quot;,&quot;additional_keyboard_theme&quot;:&quot;assets:theme_package_metadata_material_dark.binarypb&quot;}]</string>
+    <boolean name="pref_gesture_preview_trail" value="true" />
+    <boolean name="switch_to_other_imes" value="true" />
+    <boolean name="japanese_qwerty_layout_for_alphabet" value="true" />
+    <boolean name="enable_scrub_move" value="true" />
+    <string name="ACTIVE_IME.SOFT.en.landscape">ja_qwerty_alphabet</string>
+    <boolean name="enable_one_tap_to_search_changed_by_user" value="false" />
+    <boolean name="enable_emoji_alt_physical_key" value="true" />
+    <boolean name="japanese_kana_modifier_insensitive_conversion" value="true" />
+    <boolean name="enable_auto_space_smart_punctuation" value="true" />
+    <boolean name="block_offensive_words" value="true" />
+    <string name="ACTIVE_IME.SOFT.und-Latn-x-password">ja_qwerty_alphabet</string>
+    <string name="keyboard_slide_sensitivity_ratio">1.0</string>
+    <boolean name="show_language_switch_key" value="true" />
+    <string name="japanese_last_used_hiragana_alphabet_keyboard_type">prime</string>
+    <boolean name="enable_popup_on_keypress" value="true" />
+    <string name="japanese_dictionary_personalization">DEFAULT_HISTORY</string>
+    <boolean name="next_word_prediction" value="true" />
+    <boolean name="enable_gesture_input" value="true" />
+    <boolean name="hide_english_keyboard" value="false" />
+    <boolean name="always_true" value="true" />
+    <int name="contacts_task_delay_millis" value="1800000" />
+    <boolean name="japanese_incognito_mode" value="false" />
+    <boolean name="enable_one_tap_to_search" value="false" />
+    <string name="one_handed_mode.landscape">0</string>
+    <boolean name="always_false" value="false" />
+    <boolean name="japanese_space_character_form" value="false" />
+    <string name="keyboard_height_ratio.portrait">1.0</string>
+    <boolean name="japanese_qwerty_layout_for_alphabet.portrait" value="true" />
+    <string name="keyboard_height_ratio.landscape">1.0</string>
+    <int name="contacts_regular_import_interval_millis" value="86400000" />
+    <string name="current_input_method_subtype">ja_JP::AsciiCapable,EmojiCapable</string>
+    <string name="ACTIVE_LANGUAGE_ja-JP_null">ja-JP</string>
+    <boolean name="enable_auto_capitalization" value="true" />
+    <boolean name="enable_gesture_auto_commit_zh_tw" value="false" />
+    <string name="keyboard_theme">material_dark_theme</string>
+    <string name="japanese_keyboard_layout">QWERTY</string>
+    <boolean name="enable_key_border" value="false" />
+    <string name="ACTIVE_IME.SOFT.ja-JP">ja_qwerty_hiragana</string>
+    <string name="additional_keyboard_theme">assets:theme_package_metadata_material_dark.binarypb</string>
+    <boolean name="enable_shortcuts_dictionary" value="true" />
+    <string name="keyboard_slide_sensitivity_ratio.portrait">1.0</string>
+    <string name="one_handed_mode.portrait">0</string>
+    <boolean name="enable_incremental_gesture_input_zh_tw" value="true" />
+    <string name="keyboard_height_ratio">1.0</string>
+    <boolean name="export_logs_locally" value="false" />
+    <string name="ACTIVE_IME.SOFT.en">ja_qwerty_alphabet</string>
+    <string name="ACTIVE_IME.SOFT.en.portrait">ja_qwerty_alphabet</string>
+    <string name="japanese_input_style.landscape">TOGGLE_FLICK</string>
+    <string name="one_handed_mode">0</string>
+    <boolean name="show_launcher_icon" value="false" />
+    <string name="japanese_physical_keyboard_layout">DEFAULT</string>
+    <string name="ACTIVE_IME.SOFT.und-Latn-x-password.landscape">ja_qwerty_alphabet</string>
+    <string name="japanese_input_style">TOGGLE_FLICK</string>
+    <string name="japanese_keyboard_layout.landscape">QWERTY</string>
+    <boolean name="enable_autospace_after_punctuation" value="false" />
+    <boolean name="enable_orientation_aware_preference" value="true" />
+    <int name="contacts_retry_from_failure_interval_millis" value="28800000" />
+    <boolean name="enable_scrub_delete" value="false" />
+    <boolean name="pref_key_access_points_showing_order_migrated" value="true" />
+    <boolean name="show_english_keyboard" value="true" />
+    <string name="japanese_input_style.portrait">TOGGLE_FLICK</string>
+    <int name="pref_last_launch_abi_independent_version_code" value="3535" />
+    <string name="key_long_press_delay_for_a11y">3000</string>
+    <boolean name="enable_english_prediction" value="true" />
+    <string name="japanese_keyboard_layout.portrait">QWERTY</string>
+    <boolean name="japanese_fullscreen_landscape" value="false" />
+    <boolean name="enable_spell_correction" value="true" />
+    <boolean name="enable_incremental_gesture_input" value="true" />
+    <boolean name="enable_double_space_period" value="true" />
+    <string name="ACTIVE_IME.SOFT.ja-JP.portrait">ja_qwerty_hiragana</string>
+    <boolean name="allow_get_location" value="true" />
+    <boolean name="enable_gesture_auto_commit" value="false" />
+    <boolean name="pref_show_recent_emoji_in_symbol_keyboard" value="false" />
+    <boolean name="japanese_fullscreen_portrait" value="false" />
+    <boolean name="enable_spatial_model" value="true" />
+    <string name="ACTIVE_IME.SOFT.und-Latn-x-password.portrait">ja_qwerty_alphabet</string>
+</map>
