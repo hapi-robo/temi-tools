@@ -7,7 +7,7 @@ These scripts have currently been tested on:
 
 
 ## TL;DR
-Basic instructions are:
+Basic instructions for creating an APK shortcut:
 ```
 ./package_name.sh <apk-filename>
 ```
