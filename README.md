@@ -2,6 +2,8 @@
 
 This repository contains scripts that may be useful when working with [temi](https://www.robotemi.com/).
 
+These scripts have currently been tested on:
+* Ubuntu 18.04
 
 ## Usage
 ### package_name.sh
