@@ -42,7 +42,7 @@ VERSION="1.0.2-alpha"
 usage()
 {
   echo ""
-  echo "usage: shortcut.sh apk_filename shortcut_name"
+  echo "usage: shortcut.sh package_name shortcut_name"
   echo ""
   echo "Creates a shortcut for APK file"
   echo ""

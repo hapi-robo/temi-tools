@@ -25,7 +25,7 @@ positional arguments:
 ### shortcut.sh
 This script creates an APK (visible on temi's launcher) that launches another APK. This can be used to run APKs that are hidden from temi's launcher.
 ```
-usage: shortcut.sh apk_filename shortcut_name
+usage: shortcut.sh package_name shortcut_name
 
 Creates a shortcut for APK file
 
