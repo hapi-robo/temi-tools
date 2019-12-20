@@ -5,6 +5,28 @@ This repository contains scripts that may be useful when working with [temi](htt
 These scripts have currently been tested on:
 * Ubuntu 18.04
 
+
+## TL;DR
+Basic instructions are:
+```
+./package_name.sh <apk-filename>
+```
+
+This will output the APK's package-name, which is used in the following:
+```
+./shortcut.sh <package-name> <shortcut-name>
+```
+
+For example, to create a shortcut for Chrome:
+```
+$ ./package_name.sh chrome.apk
+com.android.chrome
+$ ./shortcut.sh com.android.chrome "Chrome"
+```
+
+The file `chrome_shortcut.apk` should then appear in the same directory.
+
+
 ## Usage
 ### package_name.sh
 Returns the package name for an APK file.
