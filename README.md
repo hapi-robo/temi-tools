@@ -28,8 +28,9 @@ usage: shortcut.sh apk_filename shortcut_name
 Creates a shortcut for APK file
 
 dependencies:
-  This script depends on having the Android-SDK installed and having the
-  the ANDROID_HOME environment variable set appropriately.
+  - curl
+  - Android-SDK with the ANDROID_HOME environment variable
+    set appropriately.
 
 positional arguments:
 

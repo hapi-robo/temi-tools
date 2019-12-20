@@ -6,6 +6,7 @@
 #	  ./shortcut.sh <package-name> <shortcut-name>
 #
 # Dependencies
+#   - curl
 #   - Android SDK, see: https://www.androidcentral.com/installing-android-sdk-windows-mac-and-linux-tutorial
 #
 # Author
@@ -27,8 +28,9 @@ usage()
   echo "Creates a shortcut for APK file"
   echo ""
   echo "dependencies:"
-  echo "  This script depends on having the Android-SDK installed and having the"
-  echo "  the ANDROID_HOME environment variable set appropriately."
+  echo "  - curl"
+  echo "  - Android-SDK with the ANDROID_HOME environment variable"
+  echo "    set appropriately."
   echo ""
   echo "positional arguments:"
   echo ""
@@ -98,19 +100,14 @@ cd "${GIT_REPO_NAME}-${VERSION}"
 # substitute whitespace ' ' with underscore '_'
 SHORTCUT_PACKAGE_NAME="$(echo ${SHORTCUT_NAME} | tr '[:upper:]' '[:lower:]' | tr ' ' '_')"
 
-# modify files inline (macOS?)
-# echo "package=\"com.hapirobo.shortcut\"" | sed 's/shortcut/shortcut_test/'
-# sed -i .bak "s/shortcut_template/shortcut_${SHORTCUT_PACKAGE_NAME}/" app/build.gradle
-# sed -i .bak "s/shortcut_template/shortcut_${SHORTCUT_PACKAGE_NAME}/" app/src/main/AndroidManifest.xml
-
 # modify files inline
-sed -i "s/shortcut_template/shortcut_${SHORTCUT_PACKAGE_NAME}/" app/build.gradle
-sed -i "s/shortcut_template/shortcut_${SHORTCUT_PACKAGE_NAME}/" app/src/main/AndroidManifest.xml
-sed -i "s/shortcut_template/shortcut_${SHORTCUT_PACKAGE_NAME}/" app/src/main/java/com/hapirobo/shortcut_template/MainActivity.java
-sed -i "s/shortcut_template/shortcut_${SHORTCUT_PACKAGE_NAME}/" app/src/androidTest/java/com/hapirobo/shortcut_template/ExampleInstrumentedTest.java
-sed -i "s/shortcut_template/shortcut_${SHORTCUT_PACKAGE_NAME}/" app/src/test/java/com/hapirobo/shortcut_template/ExampleUnitTest.java
-sed -i "s/shortcut_name/${SHORTCUT_NAME}/" app/src/main/res/values/strings.xml
-sed -i "s/com.hapirobo.package_name/${PACKAGE_NAME}/" app/src/main/res/values/strings.xml
+sed -i .bak "s/shortcut_template/shortcut_${SHORTCUT_PACKAGE_NAME}/" app/build.gradle
+sed -i .bak "s/shortcut_template/shortcut_${SHORTCUT_PACKAGE_NAME}/" app/src/main/AndroidManifest.xml
+sed -i .bak "s/shortcut_template/shortcut_${SHORTCUT_PACKAGE_NAME}/" app/src/main/java/com/hapirobo/shortcut_template/MainActivity.java
+sed -i .bak "s/shortcut_template/shortcut_${SHORTCUT_PACKAGE_NAME}/" app/src/androidTest/java/com/hapirobo/shortcut_template/ExampleInstrumentedTest.java
+sed -i .bak "s/shortcut_template/shortcut_${SHORTCUT_PACKAGE_NAME}/" app/src/test/java/com/hapirobo/shortcut_template/ExampleUnitTest.java
+sed -i .bak "s/shortcut_name/${SHORTCUT_NAME}/" app/src/main/res/values/strings.xml
+sed -i .bak "s/com.hapirobo.package_name/${PACKAGE_NAME}/" app/src/main/res/values/strings.xml
 
 # rename directories
 mv -v app/src/main/java/com/hapirobo/shortcut_template "app/src/main/java/com/hapirobo/shortcut_${SHORTCUT_PACKAGE_NAME}"
