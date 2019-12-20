@@ -14,7 +14,7 @@
 # constants
 DEFAULT_ANDROID_HOME=~/Android/Sdk # default location on Linux
 GIT_REPO_NAME="temi-app-shortcut"
-VERSION="1.0.2-alpha"
+VERSION="1.0.1-alpha"
 
 # display usage instructions
 usage()
