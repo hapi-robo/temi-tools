@@ -1,26 +1,28 @@
 #!/bin/sh
 #
-# Automatically creates an app shortcut for temi OS
+# Automatically creates an APK shortcut for temi's Launcher OS
 #
 # Usage
-#	  ./make_shortcut.sh <apk> <shortcut-name>
+#	  ./shortcut.sh <package-name> <shortcut-name>
 #
 # Dependencies
 #   - Android SDK, see: https://www.androidcentral.com/installing-android-sdk-windows-mac-and-linux-tutorial
 #
-#
+# Author
+#   R. Oung
+# 
 
 
 # constants
 DEFAULT_ANDROID_HOME=~/Android/Sdk # default location on Linux
 GIT_REPO_NAME="temi-app-shortcut"
-VERSION="1.0.1-alpha"
+VERSION="1.0.2-alpha"
 
 # display usage instructions
 usage()
 {
   echo ""
-  echo "usage: make_shortcut.sh apk_filename shortcut_name"
+  echo "usage: shortcut.sh apk_filename shortcut_name"
   echo ""
   echo "Creates a shortcut for APK file"
   echo ""

@@ -3,17 +3,23 @@
 # Returns the APK's package-name
 #
 # Usage
-#	  ./get_package_name.sh <apk>
+#	  ./package_name.sh <apk-filename>
 #
+# Dependencies
+#   - Android SDK, see: https://www.androidcentral.com/installing-android-sdk-windows-mac-and-linux-tutorial
 #
 
 # display usage instructions
 usage()
 {
   echo ""
-  echo "usage: get_package_name.sh apk_filename"
+  echo "usage: package_name.sh apk_filename"
   echo ""
   echo "Returns the APK's package-name"
+  echo ""
+  echo "dependencies:"
+  echo "  This script depends on having the Android-SDK installed and having the"
+  echo "  the ANDROID_HOME environment variable set appropriately."
   echo ""
   echo "positional arguments:"
   echo ""
