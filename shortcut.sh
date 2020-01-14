@@ -3,7 +3,7 @@
 # Automatically creates an APK shortcut for temi's Launcher OS
 #
 # Usage
-#	  ./shortcut.sh <package-name> <shortcut-name>
+#	  ./shortcut.sh <apk> <shortcut-name>
 #
 # Dependencies
 #   - curl
@@ -42,7 +42,7 @@ VERSION="1.0.2-alpha"
 usage()
 {
   echo ""
-  echo "usage: shortcut.sh package_name shortcut_name"
+  echo "usage: shortcut.sh <apk> <shortcut_name>"
   echo ""
   echo "Creates a shortcut for APK file"
   echo ""
@@ -53,9 +53,9 @@ usage()
   echo ""
   echo "positional arguments:"
   echo ""
-  echo "  package_name          APK's package name"
-  echo "  shortcut_name         Shortcut name; use double-quotes to encapsulate"
-  echo "                        a name with whitespace"
+  echo "  apk                   Android application package (APK)"
+  echo "  shortcut_name         Shortcut name. Use double-quotes to encapsulate"
+  echo "                        a name with whitespace."
   echo ""
   exit
 }
@@ -153,4 +153,9 @@ cp -v app/build/outputs/apk/debug/app-debug.apk "../${SHORTCUT_PACKAGE_NAME}_sho
 echo "Cleaning up..."
 cd ../
 rm -fr "${GIT_REPO_NAME}-${VERSION}"
-echo "Done"
+echo -e "Done\n"
+
+# installation instructions
+echo "Make sure you install both the package and package-shortcut:"
+echo "${PACKAGE_NAME}"
+echo "./${SHORTCUT_PACKAGE_NAME}_shortcut.apk"
