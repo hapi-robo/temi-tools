@@ -11,7 +11,7 @@ import os
 from simple_report import SimpleReport
 
 # constants
-FIELDS = ["Utterance"]
+FIELDS = ["Utterance", "Slot"]
 
 
 if __name__ == '__main__':
@@ -33,8 +33,13 @@ if __name__ == '__main__':
             # concatenate string
             utterance = ""
             for data in userSays["data"]:
-                utterance += data["text"]
-            
+                if "meta" in data:
+                    utterance += "{slot}"
+                    slot = data["text"]
+                else:
+                    utterance += data["text"]
+
             REPORT.add("Utterance", row, utterance)
+            REPORT.add("Slot", row, slot)
 
     REPORT.close()
