@@ -47,13 +47,17 @@ if __name__ == "__main__":
         print("Writing {} rows.".format(rows))
 
         for row in range(1, rows):
-            _ = fp.readline()                   # 'USER'
-            utterance = fp.readline().strip()   # utterance
-            date = fp.readline().strip()        # date
-            _ = fp.readline()                   # 'AGENT'
-            intent = fp.readline().strip()      # intent
-            date = fp.readline().strip()        # date
-            _ = fp.readline()                   # 'more_vert'
+            user_utterance = fp.readline().strip()  # USER UTTERANCE
+            date = fp.readline().strip()            # DATE
+            agent_intent = fp.readline().strip()    # AGENT INTENT
+            date = fp.readline().strip()            # DATE
+            _ = fp.readline().strip()               # 'more_vert'
+
+            utterance = user_utterance.split("USER", 1)[1]
+            intent = agent_intent.split("AGENT", 1)[1]
+
+            if not intent:
+                intent = "Intent found"
 
             print("[{}] {} {} {}".format(row, date, utterance, intent))
 
@@ -61,5 +65,6 @@ if __name__ == "__main__":
             REPORT.add("Date", row, date, date)
             REPORT.add("User", row, utterance)
             REPORT.add("Agent", row, intent)
+
 
     REPORT.close()
