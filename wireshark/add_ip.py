@@ -46,9 +46,6 @@ if __name__ == '__main__':
         # create the csv reader object
         csv_reader = csv.reader(csv_read_f, delimiter=',')
 
-        # # skip header
-        # next(csv_reader, None)
-
         # open a file for writing
         with open(args.output_csv, 'w') as csv_write_f:
             # create the csv writer object
@@ -60,9 +57,7 @@ if __name__ == '__main__':
 
                 # ignore header
                 if idx < 1:
-                    for key in KEY_LIST:
-                        row.append(data[key])
-
+                    row.extend(KEY_LIST)
                     csv_writer.writerow(row)
                 else:
                     ip_addr = row[0]
