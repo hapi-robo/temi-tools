@@ -24,7 +24,7 @@ KEY_LIST = ['country', 'city', 'lat', 'lon', 'timezone', 'isp', 'org']
 REQ_LIMIT = 30 # [requests/minute]
 WAIT_PERIOD = 60 # [sec]
 
-DEVICE_IP = '192.168.137.185'
+DEVICE_IP = '192.168.137.58'
 DEVICE_GATEWAY = '192.168.137.1'
 
 
