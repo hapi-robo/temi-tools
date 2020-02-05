@@ -83,7 +83,10 @@ if __name__ == '__main__':
                                 if key in data:
                                     row.append(data[key])
                                 else:
-                                    row.append('')
+                                    if (key == 'country') or (key == 'org'):
+                                        row.append('Unknown')
+                                    else:
+                                        row.append('')
 
                             # write row to new csv file
                             csv_writer.writerow(row)
