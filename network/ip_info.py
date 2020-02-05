@@ -12,6 +12,7 @@ usage:
 Reference:
     https://www.wireshark.org/docs/wsug_html_chunked/ChStatEndpoints.html
 """
+import os
 import csv
 import argparse
 import requests
@@ -24,7 +25,7 @@ KEY_LIST = ['country', 'city', 'lat', 'lon', 'timezone', 'isp', 'org']
 REQ_LIMIT = 30 # [requests/minute]
 WAIT_PERIOD = 60 # [sec]
 
-DEVICE_IP = '192.168.137.58'
+DEVICE_IP = '192.168.137.243'
 DEVICE_GATEWAY = '192.168.137.1'
 
 
@@ -39,7 +40,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('input_csv', help='Wireshark endpoint CSV filename (.csv)')
-    parser.add_argument('output_csv', help='Output CSV filename (.csv)')
     args = parser.parse_args()
     
     with open(args.input_csv) as csv_read_f:
@@ -47,7 +47,8 @@ if __name__ == '__main__':
         csv_reader = csv.reader(csv_read_f, delimiter=',')
 
         # open a file for writing
-        with open(args.output_csv, 'w') as csv_write_f:
+        output_filename = os.path.splitext(args.input_csv)[0] + "_info.csv"
+        with open(output_filename, 'w') as csv_write_f:
             # create the csv writer object
             csv_writer = csv.writer(csv_write_f)
 

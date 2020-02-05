@@ -10,10 +10,10 @@ import statistics
 
 # user-defined endpoints
 # endpoint = 'https://api.temi.cloud/api/v2/public/bandwidth'
-endpoint = 'https://api.temi.cloud/api/v2/public/timestamp'
+# endpoint = 'https://api.temi.cloud/api/v2/public/timestamp'
 
 # endpoint = 'https://api.temicloud.cn/api/v2/public/bandwidth'
-# endpoint = 'https://api.temicloud.cn/api/v2/public/timestamp'
+endpoint = 'https://api.temicloud.cn/api/v2/public/timestamp'
 
 response_time_list = []
 
