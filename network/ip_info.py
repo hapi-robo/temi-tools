@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 """Add IP information to Wireshark Endpoint Statistics
 
 Takes as input a Wireshark Endpoint Statistics CSV and appends the IP information
 obstained from an IP-look-up service.
 
 usage:
-    python add_ip.py <input-csv> <output-csv>
+    python add_ip.py <input-csv>
 
 Reference:
     https://www.wireshark.org/docs/wsug_html_chunked/ChStatEndpoints.html
@@ -25,8 +24,7 @@ KEY_LIST = ['country', 'city', 'lat', 'lon', 'timezone', 'isp', 'org']
 REQ_LIMIT = 30 # [requests/minute]
 WAIT_PERIOD = 60 # [sec]
 
-DEVICE_IP = '192.168.137.243'
-DEVICE_GATEWAY = '192.168.137.1'
+IGNORE_IP = ['192.168.137.58', '192.168.137.1']
 
 
 def check_append(lst, data, key):
@@ -64,7 +62,7 @@ if __name__ == '__main__':
                     ip_addr = row[0]
                     print("{} {}".format(idx, ip_addr))
 
-                    if (ip_addr == DEVICE_IP) or (ip_addr == DEVICE_GATEWAY):
+                    if ip_addr in IGNORE_IP:
                         print("-- skip")
                     else:
                         if req_cnt >= REQ_LIMIT:
