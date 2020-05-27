@@ -5,35 +5,32 @@
 You will need a linux system with `openssl`.
 
 
-## Scripts
+## Converting PKCS#12 to a Certificate
 Convert PKCS#12 (`.pfx` or `.p12`) to a certificate (`.crt`):
 ```
 ./p12toCrt.sh <filename>.p12
 ```
 
+Alternatively, you can do this the long way:
+```
+openssl pkcs12 -in <filename>.p12 -clcerts -nokeys -out <filename>.crt
+```
+
 For testing, you can create your own PKCS#12 file [here](https://pkijs.org/examples/PKCS12SimpleExample.html).
 
 
+## Creating Android System Certificate
 Convert certificate (`.crt`) to an Android certificate (`.0`):
 ```
 ./androidCertificate <filename>.crt
 ```
 
-For testing, you can use the `.crt` files in the `assets` folder, which are taken from [here](https://www.cacert.org/index.php?id=3).
-
-
-## Manual Instructions
-Convert PKCS#12 (`.pfx` or `.p12`) to a certificate (`.crt`):
-```
-openssl pkcs12 -in <filename>.p12 -clcerts -nokeys -out <filename>.crt
-```
-
-Get the `hash` of the certificate:
+Alternatively, you can do this the long way. First, get the `hash` of the certificate:
 ```
 openssl x509 -inform PEM -subject_hash_old -in <filename>.crt | head -1
 ```
 
-The `hash`, appended with `.0` (dot zero), will be used as the filename for the Android certificate:
+The `hash`, appended with `.0` (dot zero), will be used as the filename for the Android system certificate:
 ```
 cat <filename>.crt > <hash>.0
 openssl x509 -inform PEM -text -in <filename>.crt -noout >> <hash>.0
@@ -46,6 +43,10 @@ sha1sum <hash>.0
 sha256sum <hash>.0
 ```
 
+For testing, you can use the `.crt` files in the `assets` folder, which are taken from [here](https://www.cacert.org/index.php?id=3).
+
+
+## Copying an Android System Certificate to your Device
 Push the file to your Android device's certificates directory using `adb`:
 ```
 adb push <hash>.0 /sdcard/
