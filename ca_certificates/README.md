@@ -1,6 +1,10 @@
 # Installing Android CA System Certificates
 
 
+## Prerequisites
+You will need a linux system with `openssl`.
+
+
 ## Scripts
 Convert PKCS#12 (`.pfx` or `.p12`) to a certificate (`.crt`):
 ```
@@ -9,10 +13,13 @@ Convert PKCS#12 (`.pfx` or `.p12`) to a certificate (`.crt`):
 
 For testing, you can create your own PKCS#12 file [here](https://pkijs.org/examples/PKCS12SimpleExample.html).
 
+
 Convert certificate (`.crt`) to an Android certificate (`.0`):
 ```
 ./androidCertificate <filename>.crt
 ```
+
+For testing, you can use the `.crt` files in the `assets` folder, which are taken from [here](https://www.cacert.org/index.php?id=3).
 
 
 ## Manual Instructions
