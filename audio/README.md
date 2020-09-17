@@ -20,3 +20,5 @@ amixer -D pulse sset Master 35%
 	- [PESQ](https://en.wikipedia.org/wiki/Perceptual_Evaluation_of_Speech_Quality)
 	- [POLQA](https://en.wikipedia.org/wiki/Perceptual_Objective_Listening_Quality_Analysis)
 - [Python Playing and Recording Sound](https://realpython.com/playing-and-recording-sound-python/#recording-audio)
+- [Decimation](https://dspguru.com/dsp/faqs/multirate/decimation/)
+- [Microphone Array Beamforming](https://invensense.tdk.com/wp-content/uploads/2015/02/Microphone-Array-Beamforming.pdf)

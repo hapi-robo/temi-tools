@@ -49,7 +49,8 @@ if __name__ == '__main__':
 
     PARSER = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     PARSER.add_argument("freq", help="Tone frequency [Hz]")
-    PARSER.add_argument("duration", help="Tone duration [msec]")
+    PARSER.add_argument("duration", help="Tone duration [sec]")
     ARGS = PARSER.parse_args()
 
-    play_for(sine_wave(int(ARGS.freq), 4096), int(ARGS.duration))
+    # play single tone
+    play_for(sine_wave(int(ARGS.freq), 4096), int(ARGS.duration) * 1000)
